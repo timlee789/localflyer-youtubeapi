@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-//import { Link, useParams } from "react-router-dom";
+import Link  from "next/link";
 import ReactPlayer from "react-player";
-//import { Typography, Box, Stack } from "@mui/material";
-//import { CheckCircle } from "@mui/icons-material";
+import { Typography, Box, Stack } from "@mui/material";
+import { CheckCircle } from "@mui/icons-material";
 
 import { Videos} from '../../components/Videos';
 import { fetchFromAPI } from "../../utils/fetchFromAPI";
@@ -36,7 +36,7 @@ const VideoDetail = () => {
                {title} {/* {videoDetail.snippet.title} */}
             </p>
             <div>
-              <Link to={`/channel/${channelId}`}>
+              <Link href={`/channel/${channelId}`}>
                 <p>
                   {channelTitle}
                   <CheckCircle sx={{fontSize: '12px', color: 'gray', ml: '5px'}} />
